@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaksApi", "RaksApi\RaksApi.csproj", "{D80E9131-179D-49FA-9249-CF5FDA482A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaksApi.Tests", "RaksApi.Tests\RaksApi.Tests.csproj", "{26EC5144-22D1-4A05-B04E-C47180D57B7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D80E9131-179D-49FA-9249-CF5FDA482A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80E9131-179D-49FA-9249-CF5FDA482A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80E9131-179D-49FA-9249-CF5FDA482A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80E9131-179D-49FA-9249-CF5FDA482A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EC5144-22D1-4A05-B04E-C47180D57B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EC5144-22D1-4A05-B04E-C47180D57B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EC5144-22D1-4A05-B04E-C47180D57B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EC5144-22D1-4A05-B04E-C47180D57B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38DA3E0A-FA38-447A-A289-696D73F9CCE1}
+	EndGlobalSection
+EndGlobal
