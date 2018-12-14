@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0528219a670e4e2383fed7134601f675" Name="Diagram1" ZoomLevel="45">
+        <EntityTypeShape EntityType="Model.GM_CECHY" Width="1.5" PointX="3.5" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GM_FS" Width="1.5" PointX="5.25" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GM_FZ" Width="1.5" PointX="3" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GM_PZ" Width="1.5" PointX="5.25" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GM_TOWARY" Width="1.5" PointX="8" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GM_WARTOSCI_CECH" Width="1.5" PointX="5.75" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GM_WZ" Width="1.5" PointX="8.25" PointY="57.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.R3_CONTACT_ADDRESSES" Width="1.5" PointX="3" PointY="84.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.R3_CONTACT_PHONES" Width="1.5" PointX="3" PointY="82" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.R3_CONTACT_WEB_ADDRESSES" Width="1.5" PointX="3" PointY="91.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.R3_CONTACTS" Width="1.5" PointX="0.75" PointY="39.25" IsExpanded="true" />
+        <AssociationConnector Association="Model.GM_WARTOSCI_CECH_RODZAJ_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_FS_AKWIZYTOR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_FS_DOST_ID_ADR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_FS_ID_ODBIORCY_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_FS_ID_PLATNIKA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_FZ_ID_DOSTAWCY_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_PZ_ID_FAKTURY_ZAKUPU_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_PZ_ID_DOSTAWCY_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_CECHA1_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_CECHA2_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_CECHA3_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_CECHA4_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_CECHA5_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_DOSTAWCA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_ID_TOWARU_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_TOWARY_PRODUCENT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_WZ_AKWIZYTOR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_WZ_DOST_ID_ADR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_WZ_ID_ODBIORCY_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.GM_WZ_ID_PLATNIKA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.R3_CONTACT_ADDR_CONTACT_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.R3_CONTACTS_ADDRESS_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.R3_CONTACT_PHONES_CONTACT_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.R3_CONT_WEB_ADDR_CONTACT_ID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
