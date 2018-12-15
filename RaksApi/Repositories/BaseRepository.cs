@@ -8,8 +8,13 @@ namespace RaksApi.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        public Entities _context { get; set; }
-        public DbSet<T> _dbSet { get; set; }
+        protected Entities _context { get; set; }
+        protected DbSet<T> _dbSet { get; set; }
+
+        public Entities Context
+        {
+            get { return _context; }
+        }
 
         public BaseRepository(Entities context)
         {

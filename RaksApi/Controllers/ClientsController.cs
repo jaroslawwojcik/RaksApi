@@ -10,8 +10,13 @@ namespace RaksApi.Controllers
 {
     public class ClientsController : ApiController
     {
-        private static readonly Entities context = new Entities();
-        private static readonly IClientsRepository<R3_CONTACTS> _clientsRepository = new ClientsRepository(context);
+
+        private readonly IClientsRepository _clientsRepository; 
+
+        public ClientsController(IClientsRepository clientsRepository)
+        {
+            _clientsRepository = clientsRepository;
+        }
 
         /// <summary>
         /// Returns list of all Clients
@@ -27,14 +32,14 @@ namespace RaksApi.Controllers
             }
             foreach(var client in allClients)
             {
-                clientModels.Add(mapToClientModel(client));
+                clientModels.Add(MapToClientModel(client));
             }
 
             var allClientsToJson = ClientToJson(clientModels);
             return Ok(allClientsToJson);
         }
 
-        // GET: api/Clients/5
+        
         /// <summary>
         /// Returns one Client
         /// </summary>
@@ -46,12 +51,13 @@ namespace RaksApi.Controllers
             {
                 return NotFound();
             }
-            var clientModel = mapToClientModel(raksClient);
+            var clientModel = MapToClientModel(raksClient);
             var allClientsToJson = ClientToJson(clientModel);
             return Ok(allClientsToJson);
         }
 
-        private ClientModel mapToClientModel(R3_CONTACTS client)
+        #region Map
+        private ClientModel MapToClientModel(R3_CONTACTS client)
         {
             return new ClientModel()
             {
@@ -65,22 +71,26 @@ namespace RaksApi.Controllers
                 Country = client.COUNTRY,
                 ZipCode = client.ZIPCODE,
                 Province = client.PROVINCE,
-                EMail = getEmailList(client),
-                PhoneNumber = getPhoneNumber(client)
+                EMail = GetEmailList(client),
+                PhoneNumber = GetPhoneNumber(client)
             };
         }
+        #endregion
 
-        private IEnumerable<string> getEmailList(R3_CONTACTS raksClient)
+        #region GetContactDetails
+        private IEnumerable<string> GetEmailList(R3_CONTACTS raksClient)
         {
             var raksEmailList = raksClient.R3_CONTACT_WEB_ADDRESSES.Where(e => e.CONTACT_ID == raksClient.ID).Select(e => e.ADDRESS).ToList();
             return raksEmailList;
         }
 
-        private IEnumerable<string> getPhoneNumber(R3_CONTACTS raksClient)
+        private IEnumerable<string> GetPhoneNumber(R3_CONTACTS raksClient)
         {
             var raksEmailList = raksClient.R3_CONTACT_PHONES.Where(e => e.CONTACT_ID == raksClient.ID).Select(e => e.NUMBER).ToList();
             return raksEmailList;
         }
+        #endregion
+
 
         private string ClientToJson<T>(T Client)
         {

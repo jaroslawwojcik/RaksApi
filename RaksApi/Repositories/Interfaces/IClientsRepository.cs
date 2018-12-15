@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RaksApi.Repositories.Interfaces
 {
-    interface IClientsRepository<T> : IBaseRepository<T> where T : R3_CONTACTS
+    public interface IClientsRepository : IBaseRepository<R3_CONTACTS> 
     {
 
     }

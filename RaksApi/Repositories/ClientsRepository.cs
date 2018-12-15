@@ -6,11 +6,12 @@ using System.Web;
 
 namespace RaksApi.Repositories
 {
-    public class ClientsRepository : BaseRepository<R3_CONTACTS>, IClientsRepository<R3_CONTACTS>
+    public class ClientsRepository : BaseRepository<R3_CONTACTS>, IClientsRepository
     {
+        
         public ClientsRepository(Entities context):base(context)
         {
-
+            
         }
     }
 }
