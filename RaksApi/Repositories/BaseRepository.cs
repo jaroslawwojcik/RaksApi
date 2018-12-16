@@ -22,7 +22,7 @@ namespace RaksApi.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             IQueryable<T> query = _dbSet;
             return query;

@@ -8,7 +8,7 @@ namespace RaksApi.Repositories
 {
     public interface IBaseRepository<T> where T : class
     {
-        IEnumerable<T> GetAll();
+        IQueryable<T> GetAll();
         T GetById(int id);
     }
 }
